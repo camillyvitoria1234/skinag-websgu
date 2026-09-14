@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skins - Login</title>
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <script src="./assets/js/index.js" defer></script>
+  </head>
+  <body>
+    <main class="split-layout">
+      <!-- Lado Esquerdo: Banner de Boas-vindas -->
+      <aside class="banner-lateral">
+        <div class="banner-conteudo">
+          <h1>Sky<span>nex</span></h1>
+          <p>
+            O melhor lugar para comparar suas skins de CS:GO, e
+            Valorant.
+          </p>
+        </div>
+      </aside>
+
+      <!-- Lado Direito: Formulários -->
+      <section class="form-container">
+        <!-- Cadastro -->
+        <div id="cadastro">
+          <form action="#">
+            <h2>Criar Conta</h2>
+            <input
+              type="text"
+              maxlength="10"
+              placeholder="Usuário"
+              required
+              class="campo"
+              name="fusuario"
+            />
+            <input
+              type="email"
+              maxlength="70"
+              placeholder="E-mail"
+              required
+              class="campo"
+              name="femail"
+            />
+            <input
+              type="password"
+              maxlength="12"
+              minlength="8"
+              placeholder="Senha"
+              required
+              class="campo"
+              name="fsenha"
+            />
+            <input
+              type="password"
+              maxlength="12"
+              minlength="8"
+              placeholder="Confirme a Senha"
+              required
+              class="campo"
+              name="fsenha2"
+            />
+
+            <button type="submit" class="campo botao">Cadastrar</button>
+            <a href="#" class="alternar">Já tem conta? Faça Login!</a>
+          </form>
+        </div>
+
+        <!-- Login -->
+        <div id="login">
+          <form action="#">
+            <input
+              type="email"
+              maxlength="70"
+              placeholder="E-mail"
+              required
+              class="campo"
+              name="femail"
+            />
+            <input
+              type="password"
+              maxlength="12"
+              minlength="8"
+              placeholder="Senha"
+              required
+              class="campo"
+              name="fsenha"
+            />
+
+            <button
+              type="button"
+              onclick="window.location.href = './Home.html'"
+              class="campo botao"
+            >
+              Entrar
+            </button>
+            <a href="#" class="alternar">Ainda não tem conta? Crie uma!</a>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

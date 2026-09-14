@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.split-layout {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #121212; /* Preto */
+}
+
+/* Painel Esquerdo com Gradiente */
+.banner-lateral {
+    flex: 1; /* Ocupa metade da tela */
+    background: linear-gradient(135deg, #121212 20%, #1e1e1e 100%);
+    border-right: 4px solid #ff007f; /* Detalhe rosa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efeito de brilho de fundo */
+.banner-lateral::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 107, 0, 0.1) 0%, rgba(0,0,0,0) 70%);
+}
+
+.banner-conteudo {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.banner-conteudo h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.banner-conteudo span {
+    color: #ff6b00; /* Laranja */
+}
+
+.banner-conteudo p {
+    color: #aaa;
+    font-size: 1.2rem;
+    max-width: 400px;
+}
+
+/* Painel Direito com Formulários */
+.form-container {
+    width: 100%;
+    max-width: 450px;
+    background: #1e1e1e; /* Cinza escuro */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container h2 {
+    font-size: 2rem;
+    color: #ff007f; /* Rosa */
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-container input {
+    height: 45px;
+    margin-bottom: 20px;
+    background: #2a2a2a; 
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #fff;
+    text-indent: 15px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-container input:focus {
+    border-color: #ff6b00; /* Laranja no foco */
+    box-shadow: 0 0 8px rgba(255, 107, 0, 0.3);
+}
+
+.form-container button {
+    height: 50px;
+    background: linear-gradient(90deg, #ff007f, #ff6b00); /* Rosa para Laranja */
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.form-container button:hover {
+    filter: brightness(1.2);
+}
+
+.alternar {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.alternar:hover {
+    color: #ff007f;
+}
+
+/* Responsividade */
+@media (max-width: 800px) {
+    .split-layout {
+        flex-direction: column;
+    }
+    .banner-lateral {
+        padding: 4rem 2rem;
+        border-right: none;
+        border-bottom: 4px solid #ff007f;
+    }
+    .form-container {
+        max-width: 100%;
+    }
+}
