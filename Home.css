@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #121212; 
+}
+::-webkit-scrollbar-thumb {
+    background: #444; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #ff007f; 
+}
+
+body {
+    background-color: #121212; /* Fundo Preto */
+    color: #e0e0e0;
+}
+
+.dashboard-layout {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    width: 250px;
+    background-color: #1a1a1a; /* Cinza Escuro */
+    border-right: 2px solid #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    padding: 2rem 1.5rem;
+    border-bottom: 1px solid #333;
+}
+
+.logo h2 {
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.logo span {
+    color: #ff007f; /* Rosa */
+}
+
+.menu {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 0;
+}
+
+.menu a {
+    padding: 1rem 1.5rem;
+    color: #aaa;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-left: 4px solid transparent;
+    transition: 0.3s;
+}
+
+.menu a:hover, .menu a.ativo {
+    background-color: #252525;
+    color: #ff6b00; /* Laranja no hover */
+    border-left: 4px solid #ff6b00;
+}
+
+.perfil-rodape {
+    padding: 1.5rem;
+    border-top: 1px solid #333;
+}
+
+.perfil-rodape button {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #ff007f; /* Borda rosa */
+    color: #ff007f;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.perfil-rodape button:hover {
+    background: #ff007f;
+    color: #fff;
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+.conteudo-principal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.scroll-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 2rem;
+}
+
+/* --- SEÇÃO DE DESTAQUE --- */
+.hero-banner {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(45deg, #1e1e1e, #2a2a2a);
+    border-radius: 12px;
+    border-left: 5px solid #ff6b00; /* Destaque laranja */
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    margin-bottom: 40px;
+}
+
+.hero-texto h1 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.hero-texto p {
+    color: #aaa;
+}
+
+/* --- GRID DE ARMAS --- */
+.sessao-titulo {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.grid-armas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.card-arma {
+    background-color: #1e1e1e; /* Cinza Escuro */
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card-arma:hover {
+    border-color: #ff007f; /* Borda rosa no hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 0, 127, 0.15);
+}
+
+.card-arma img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    background-color: #252525;
+}
+
+.card-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card-info h3 {
+    color: #ff6b00; /* Laranja */
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.card-info p {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    min-height: 40px; /* Garante que os cards fiquem alinhados se o texto for pequeno */
+}
+
+.card-info button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(90deg, #ff6b00, #ff007f);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-info button:hover {
+    opacity: 0.8;
+}
+.logo {
+    padding: 2rem 1.5rem;
+    border-bottom: 1px solid #333;
+    display: flex; /* Alinha os itens lado a lado */
+    align-items: center; /* Centraliza na vertical */
+    gap: 10px; /* Dá o espaço entre a imagem e o texto */
+}
+
+.logo-img {
+    width: 40px; /* Tamanho da logo */
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo h2 {
+    color: #fff;
+    font-size: 1.8rem;
+}
