@@ -203,3 +203,21 @@ body {
 .card-info button:hover {
     opacity: 0.8;
 }
+.logo {
+    padding: 2rem 1.5rem;
+    border-bottom: 1px solid #333;
+    display: flex; /* Alinha os itens lado a lado */
+    align-items: center; /* Centraliza na vertical */
+    gap: 10px; /* Dá o espaço entre a imagem e o texto */
+}
+
+.logo-img {
+    width: 40px; /* Tamanho da logo */
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo h2 {
+    color: #fff;
+    font-size: 1.8rem;
+}
